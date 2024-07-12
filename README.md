@@ -11,9 +11,21 @@ Make sure you have the following installed:
 - Node.js
 - npm
 
-### Installation
+### Environment Setup
 
 1. **Clone the repository**
-   ```sh
-   git clone https://github.com/your-username/spring-finder.git
-   cd spring-finder
+```
+git clone https://github.com/your-username/spring-finder.git
+cd spring-finder
+code .
+```
+
+2. **Install packages**
+```
+npm install
+```
+
+3. **Run Dev Environment**
+```
+npm run dev
+```
