@@ -1,11 +1,13 @@
 import './App.css'
+import HeroSection from './components/HomePage/HeroSection'
 
 function App() {
 
   return (
     <>
       <div>
-        <h1>spring finder</h1>
+        <HeroSection />
+        
       </div>
     </>
   )
