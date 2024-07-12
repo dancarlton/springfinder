@@ -1,9 +1,18 @@
-.carousel__section {
-    padding-bottom: 100px;
+.carousel-section {
+  width: 100%;
+  max-width: 1440px;
+  height: 944px;
+  background: #f3f4f6ff;
+  border-radius: 0px;
+  margin: 0 auto;
+  padding-top: 96px;
+  padding-left: 132px;
 }
 
-.carousel__top-section{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.carousel-section__text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 400;
+  color: #171a1fff;
 }
