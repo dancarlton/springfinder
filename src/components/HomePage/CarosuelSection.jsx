@@ -1,12 +1,21 @@
-import Carousel from "../common/Carousel"
+import Carousel from "../common/Carousel";
+import '../../blocks/CarouselSection.css'
 
-const CarosuelSection = () => {
+const CarouselSection = () => {
   return (
-    <div className="carousel-section">
-      <h1 className="carousel-section__text">Best Places <br></br>to Cool Off</h1>
-      <Carousel />
-    </div>
-  )
-}
+    <>
+      <div className="carousel__section">
+        <div className="carousel__top-section">
+          <h1 className="carousel__header">Top Paces to Cool Off</h1>
+          <div className="carousel__buttons">
+            <button className="carousel__button">prev</button>
+            <button className="carousel__button">next</button>
+          </div>
+        </div>
+        <Carousel />
+      </div>
+    </>
+  );
+};
 
-export default CarosuelSection
+export default CarouselSection;
