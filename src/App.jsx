@@ -1,4 +1,5 @@
 import './App.css'
+import CarosuelSection from './components/HomePage/CarosuelSection'
 import HeroSection from './components/HomePage/HeroSection'
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <>
       <div>
         <HeroSection />
-        
+        <CarosuelSection />
       </div>
     </>
   )
