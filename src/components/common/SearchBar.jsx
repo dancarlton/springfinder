@@ -8,9 +8,9 @@ const SearchBar = () => {
         value='{query}'
         onChange='{handleInputChange}'
       />
-      <button type='submit' className='search__button'>
+      {/* <button type='submit' className='search__button'>
         Search
-      </button>
+      </button> */}
     </form>
   )
 }
