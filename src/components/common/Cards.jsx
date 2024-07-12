@@ -1,11 +1,9 @@
 const Cards = () => {
-    return (
-        <>
-        <h1>Cards goes here</h1>
-
-        </>
-    )
+  return (
+    <div className='container'>
+      <div className='card'></div>
+    </div>
+  )
 }
-
 
 export default Cards
