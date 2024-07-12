@@ -1,3 +1,7 @@
+# Spring Finder
+
+Cool off this summer at your local waterhole. Discover the best places to cool off, find amazing destinations, and explore new adventures with Spring Finder.
+
 ## Getting Started
 
 ### Prerequisites
