@@ -1,4 +1,4 @@
-const dummyData = {
+export const dummyData = {
   springs: [
     {
       name: 'Travertine Hot Springs',
@@ -120,4 +120,4 @@ const dummyData = {
   ],
 }
 
-export default dummyData
+
