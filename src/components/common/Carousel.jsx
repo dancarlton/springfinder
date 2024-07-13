@@ -1,37 +1,56 @@
-import Cards from './Cards'
-import '../../blocks/Carousel.css'
-import { useState } from 'react'
-import { dummyData } from '../../data/dummyData'
+import "../../blocks/Carousel.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import { useEffect, useState } from "react";
+import { dummyData } from "../../data/dummyData";
+import Cards from "./Cards";
 
 const Carousel = () => {
-  const [activeIndex, setActiveIndex] = useState(0)
+  const [data, setData] = useState([]);
 
-  const nextSlide = () => {
-    setActiveIndex(prevIndex =>
-      prevIndex === dummyData.length - 1 ? 0 : prevIndex + 1
-    )
-  }
-  const prevSlide = () => {
-    setActiveIndex(prevIndex =>
-      prevIndex === 0 ? dummyData.length - 1 : prevIndex - 1
-    )
-  }
+  useEffect(() => {
+    const processedData = [];
 
-  return (
-       <div className="carousel">
-      <button className="carousel__button carousel__button--left" onClick={prevSlide}>
-        ‹
-      </button>
-      <div className="carousel__container">
-        <div className="carousel__slide">
-          <Cards item={dummyData[activeIndex]} />
-        </div>
-      </div>
-      <button className="carousel__button carousel__button--right" onClick={nextSlide}>
-        ›
-      </button>
+    // extract data from springs
+    dummyData.springs.forEach((card) => {
+      processedData.push({
+        name: card.name,
+        image: card.image,
+        description: card.description,
+      });
+    });
+
+    // extract data from pools
+    dummyData.pools.forEach((card) => {
+      processedData.push({
+        name: card.name,
+        image: card.image,
+        description: card.description,
+      });
+    });
+
+    setData(processedData);
+  }, []);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    centerMode: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+  };
+
+  return(
+    <div className="carousel">
+      <Slider {...settings}>
+        {data.map((item, index) => (
+          <Cards key={index} item={item} />
+        ))}
+      </Slider>
     </div>
-  )
-}
+  );
+};
 
-export default Carousel
+export default Carousel;

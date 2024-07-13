@@ -8,8 +8,7 @@ const CarouselSection = () => {
         <div className="carousel__top-section">
           <h1 className="carousel__header">Best Places <br></br> to Cool Off</h1>
           <div className="carousel__buttons">
-            <button className="carousel__button">prev</button>
-            <button className="carousel__button">next</button>
+    
           </div>
         </div>
         <Carousel />
