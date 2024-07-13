@@ -9,7 +9,7 @@ import ItemModal from "./components/ItemModal";
 import CarouselSection from "./components/HomePage/CarosuelSection";
 
 function App() {
-  const [activeModal, setActiveModal] = useState("view-destination");
+  const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
   const onClose = () => {
     setActiveModal("");
