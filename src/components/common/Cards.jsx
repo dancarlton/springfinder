@@ -1,3 +1,6 @@
+// import cardData +
+// Cards need to be rendered from cardData
+
 const Cards = () => {
   return (
     <div className='container'>
