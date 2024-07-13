@@ -7,6 +7,8 @@ import { cardData } from "./utils/constants.";
 import DestinationReviews from "./components/DestinationReviews";
 import ItemModal from "./components/ItemModal";
 import CarouselSection from "./components/HomePage/CarosuelSection";
+import { Header } from "./components/HomePage/Header";
+import { Footer } from "./components/HomePage/Footer";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -31,6 +33,7 @@ function App() {
   return (
     <>
       <div>
+        <Header />
         <HeroSection />
         <CarouselSection openDestination={openDestination} />
         <DestinationModal
@@ -41,6 +44,7 @@ function App() {
           // imagePopup={handleItemClick}
           DestinationReviews={DestinationReviews}
         />
+        <Footer />
       </div>
     </>
   );

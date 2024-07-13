@@ -9,3 +9,12 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+
+.section {
+  flex: 1; /* Make all sections take up equal space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc; /* Optional: Add a border for visual separation */
+  padding: 20px;
+}
