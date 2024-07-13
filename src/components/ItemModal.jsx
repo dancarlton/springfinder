@@ -4,7 +4,7 @@ function ItemModal({ handleOutsideClick, activeModal, item, onClose }) {
   return (
     <div
       onClick={handleOutsideClick}
-      className={`modal ${activeModal === "preview" ? "modal_opened" : ""}`}
+      // className={`modal ${activeModal === "preview" ? "modal_opened" : ""}`}
     >
       <div className="modal__content modal__content-card-item">
         <button
