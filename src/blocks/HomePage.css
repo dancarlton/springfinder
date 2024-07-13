@@ -24,8 +24,13 @@
 
 .hero__text {
   position: absolute;
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans", Inter, Arial, sans-serif;
+  font-size: 88px; 
   line-height: 88px;
   font-weight: 400;
   color: #FFFFFFFF;
+  text-align: center;
+  z-index: 1;
+  margin:258px 132px 366px;
+  width: 1176px; 
 }
