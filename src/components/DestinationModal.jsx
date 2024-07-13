@@ -11,7 +11,7 @@ function DestinationModal({
   return (
     <div
       onClick={handleOutsideClick}
-      className={`modal ${isOpen} ? "modal_opened" : ""}`}
+      className={`modal ${isOpen ? "modal_opened" : ""}`}
     >
       <div className="modal__content">
         <div className="modal__header">
@@ -36,7 +36,7 @@ function DestinationModal({
         <section className="modal__reviews">
           <DestinationReviews />
           // Section Title + add review button + carosel with user pics + user
-          reviews
+          // reviews
         </section>
       </div>
     </div>

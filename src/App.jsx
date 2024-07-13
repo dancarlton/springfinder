@@ -9,7 +9,7 @@ import ItemModal from "./components/ItemModal";
 import CarouselSection from "./components/HomePage/CarosuelSection";
 
 function App() {
-  const [activeModal, setActiveModal] = useState("");
+  const [activeModal, setActiveModal] = useState("view-destination");
   const [selectedCard, setSelectedCard] = useState({});
   const onClose = () => {
     setActiveModal("");
@@ -41,15 +41,16 @@ function App() {
           // imagePopup={handleItemClick}
           DestinationReviews={DestinationReviews}
         />
-        <ItemModal
-          handleOutsideClick={handleOutsideClick}
-          activeModal={activeModal}
-          item={selectedCard}
-          onClose={onClose}
-        />
       </div>
     </>
   );
 }
+
+/* <ItemModal
+          handleOutsideClick={handleOutsideClick}
+          activeModal={activeModal}
+          item={selectedCard}
+          onClose={onClose}
+        /> */
 
 export default App;
