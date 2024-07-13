@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useState } from "react";
 import "./App.css";
@@ -20,35 +19,38 @@ function App() {
       onClose();
     }
   };
+  const openDestination = () => {
+    setActiveModal("view-destination");
+  };
 
-  const handleItemClick = (item) => {
+  /* const handleItemClick = (item) => {
     setActiveModal("preview");
     setSelectedCard(item);
-  };
+  }; */
 
   return (
     <>
       <div>
         <HeroSection />
+        <CarouselSection openDestination={openDestination} />
         <DestinationModal
           handleOutsideClick={handleOutsideClick}
-          activeModal={activeModal}
+          isOpen={activeModal === "view-destination"}
           item={cardData}
           onClose={onClose}
-          imagePopup={handleItemClick}
+          // imagePopup={handleItemClick}
           DestinationReviews={DestinationReviews}
         />
-        <ItemModal
-          handleOutsideClick={handleOutsideClick}
-          activeModal={activeModal}
-          item={selectedCard}
-          onClose={onClose}
-        />
-        <CarouselSection />
-
       </div>
     </>
   );
 }
+
+/* <ItemModal
+          handleOutsideClick={handleOutsideClick}
+          activeModal={activeModal}
+          item={selectedCard}
+          onClose={onClose}
+        /> */
 
 export default App;

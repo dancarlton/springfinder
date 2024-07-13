@@ -2,7 +2,7 @@ import "../blocks/modal.css";
 
 function DestinationModal({
   handleOutsideClick,
-  activeModal,
+  isOpen,
   item,
   onClose,
   imagePopup,
@@ -11,7 +11,7 @@ function DestinationModal({
   return (
     <div
       onClick={handleOutsideClick}
-      className={`modal ${activeModal === "preview" ? "modal_opened" : ""}`}
+      className={`modal ${isOpen ? "modal_opened" : ""}`}
     >
       <div className="modal__content">
         <div className="modal__header">
@@ -24,16 +24,19 @@ function DestinationModal({
           src={item.link}
           alt={item.name}
           className="modal__image"
-          onClick={imagePopup}
+          // onClick={imagePopup}
         />
         //possible like button that coordinates with card like button //
-        possible carosel
-        <button className="modal__gps-button">Get Directions</button>
+        possible carousel in place of img
+        <section className="modal__directions">
+          <p className="modal__address">{item.address}</p>
+          <button className="modal__gps-button">Get Directions</button>
+        </section>
         <h2 className="modal__description"> {item.description}</h2>
         <section className="modal__reviews">
           <DestinationReviews />
           // Section Title + add review button + carosel with user pics + user
-          reviews
+          // reviews
         </section>
       </div>
     </div>
