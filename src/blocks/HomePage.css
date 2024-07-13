@@ -9,7 +9,7 @@
 }
 
 .hero__image {
-  background-image: url('../assets/images/home-cover-page.jpg');
+  background-image: url('/public/images/home-cover-page.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

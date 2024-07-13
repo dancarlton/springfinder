@@ -1,21 +1,43 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { dummyData } from '../../data/dummyData'
 
-const cardComponent = () => {
+const Cards = () => {
   const [data, setData] = useState([])
 
   useEffect(() => {
     const processedData = []
-    dummyData.forEach(card)
-  })
-}
 
+    // extract data from springs
+    dummyData.springs.forEach(card => {
+      processedData.push({
+        name: card.name,
+        image: card.image,
+        description: card.description,
+      })
+    })
 
-const Cards = () => {
+    // extract data from pools
+    dummyData.pools.forEach(card => {
+      processedData.push({
+        name: card.name,
+        image: card.image,
+        description: card.description,
+      })
+    })
+
+    setData(processedData)
+  }, [])
+
   return (
-    <div className='container'>
-      <div className='card'></div>
+    <div className='card__container'>
+      {data.map((item, index) => (
+        <div key={index} className='card'>
+          <img src={item.image} alt={item.name} className='card__image' />
+          <h3 className='card__name'>{item.name}</h3>
+          <p className='card__description'>{item.description}</p>
+        </div>
+      ))}
     </div>
   )
 }
