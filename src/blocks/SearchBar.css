@@ -17,9 +17,9 @@
 }
 
 .search__button {
-  /* position: absolute; */
-  top: 4px;
-  left: 292px;
+  position: absolute;
+  right: 512px;
+  top: 326px;
   width: 164px;
   height: 52px;
   padding: 0 20px;

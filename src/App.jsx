@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useState } from "react";
 import "./App.css";
@@ -6,6 +7,7 @@ import HeroSection from "./components/HomePage/HeroSection";
 import { cardData } from "./utils/constants.";
 import DestinationReviews from "./components/DestinationReviews";
 import ItemModal from "./components/ItemModal";
+import CarouselSection from "./components/HomePage/CarosuelSection";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -42,6 +44,8 @@ function App() {
           item={selectedCard}
           onClose={onClose}
         />
+        <CarouselSection />
+
       </div>
     </>
   );

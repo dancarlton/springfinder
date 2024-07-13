@@ -1,0 +1,21 @@
+.carousel__section {
+    width: 100%;
+    max-width: 1440px;
+    height: 944px;
+    background: #F3F4F6FF;
+    border-radius: 0px;
+    margin: 0 auto;
+    padding-top: 96px;
+    padding-left: 132px;
+    box-sizing: border-box;
+}
+
+.carousel__header {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 400;
+  color: #171a1fff;
+  background: #F3F4F6FF;
+  margin-bottom: 48px;
+}

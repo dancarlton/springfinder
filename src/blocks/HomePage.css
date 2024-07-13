@@ -24,14 +24,8 @@
 
 .hero__text {
   position: absolute;
-  top: 258px;
-  left: 132px;
-  width: 1176px;
-  height: 176px;
-  font-family: DM Sans;
-  font-size: 88px;
+  font-family: "DM Sans", sans-serif;
   line-height: 88px;
   font-weight: 400;
-  color: #ffffffff;
-  text-align: center;
+  color: #FFFFFFFF;
 }
