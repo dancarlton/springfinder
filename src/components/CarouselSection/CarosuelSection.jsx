@@ -21,8 +21,9 @@ const CarouselSection = () => {
       onClose();
     }
   };
-  const openDestination = () => {
+  const openDestination = (item) => {
     setActiveModal("view-destination");
+    setSelectedCard(item);
   };
   const [data, setData] = useState([]);
 
@@ -60,10 +61,10 @@ const CarouselSection = () => {
         </div>
         <div className="carousel">
           <Slider {...settings}>
-            {data.map((item, index) => (
+            {data.map((item) => (
               <Cards
                 openDestination={openDestination}
-                key={index}
+                key={item._id}
                 item={item}
               />
             ))}
@@ -73,7 +74,7 @@ const CarouselSection = () => {
       <DestinationModal
         handleOutsideClick={handleOutsideClick}
         isOpen={activeModal === "view-destination"}
-        item={cardData}
+        item={selectedCard}
         onClose={onClose}
         // imagePopup={handleItemClick}
         DestinationReviews={DestinationReviews}
