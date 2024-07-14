@@ -8,6 +8,7 @@
     padding-top: 96px;
     padding-left: 132px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .carousel__header {

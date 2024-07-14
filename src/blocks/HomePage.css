@@ -23,9 +23,16 @@
 }
 
 .hero__text {
+  display: flex;
   position: absolute;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 70px;
   line-height: 88px;
-  font-weight: 400;
-  color: #FFFFFFFF;
+  margin: 2px 25px;
+  text-align: center;
+  font-weight: 800;
+  justify-content: center;
+  align-items: center;
+  color: #ffffffff;
+  top: 250px;
 }

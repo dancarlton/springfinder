@@ -5,7 +5,7 @@ const SearchBar = () => {
         type='text'
         className='search__input'
         placeholder='Search...'
-        value='{query}'
+        value='Search...'
         onChange='{handleInputChange}'
       />
       {/* <button type='submit' className='search__button'>
