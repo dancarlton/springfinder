@@ -21,20 +21,44 @@ const CarouselSection = () => {
       onClose();
     }
   };
-  const openDestination = () => {
+  const openDestination = (item) => {
     setActiveModal("view-destination");
+    setSelectedCard(item);
   };
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const processedData = cardData.map((card) => ({
+      id: card._id,
       name: card.name,
       link: card.link,
+      address: card.address,
+      coordinates: card.coordinates,
       description: card.description,
     }));
 
     setData(processedData);
   }, []);
+
+  const getDirections = (item) => {
+    document.location.href = `http://maps.google.com?q=${item.coordinates}`;
+  };
+
+  useEffect(() => {
+    if (!activeModal) return;
+    const handleEscClose = (e) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscClose);
+
+    return () => {
+      document.removeEventListener("keydown", handleEscClose);
+    };
+  }, [activeModal]);
 
   const settings = {
     dots: true,
@@ -60,10 +84,10 @@ const CarouselSection = () => {
         </div>
         <div className="carousel">
           <Slider {...settings}>
-            {data.map((item, index) => (
+            {data.map((item) => (
               <Cards
                 openDestination={openDestination}
-                key={index}
+                key={item._id}
                 item={item}
               />
             ))}
@@ -73,8 +97,9 @@ const CarouselSection = () => {
       <DestinationModal
         handleOutsideClick={handleOutsideClick}
         isOpen={activeModal === "view-destination"}
-        item={cardData}
+        item={selectedCard}
         onClose={onClose}
+        getDirections={getDirections}
         // imagePopup={handleItemClick}
         DestinationReviews={DestinationReviews}
       />
