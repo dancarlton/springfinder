@@ -51,8 +51,7 @@
 
 .modal__image {
   width: 100%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 20px;
 }
 
 .modal__title {
@@ -68,14 +67,18 @@
   border: none;
   top: 20px;
   right: 28px;
-  background-image: url(../assets/Unionclose.png);
+  background-image: url(..//..//assets/Unionclose.png);
   width: 16px;
   height: 16px;
   background-color: transparent;
+  cursor: pointer;
+  background-repeat: no-repeat;
 }
 
 .modal__close-card-item {
-  background-image: url(../assets/UnionCardItemClose.png);
+  background-image: url(..//..//assets/Unionclose.png);
+  cursor: pointer;
+  background-repeat: no-repeat;
 }
 
 .modal__form {
@@ -125,7 +128,7 @@
   padding-bottom: 10px;
 }
 
-.modal__submit {
+.modal__gps-button {
   margin-top: 22px;
   margin-bottom: 0;
   padding: 8px 16px;
@@ -133,14 +136,14 @@
   border: none;
   border-radius: 5px;
   color: #ffffff;
-  height: 36px;
-  width: 124px;
+  height: 75px;
+  width: 150px;
 }
 
-.modal__submit:hover {
+.modal__gps-button:hover {
   background: #00000099;
 }
 
-.modal__submit:disabled {
+.modal__gps-button:disabled {
   background: #0000004d;
 }
