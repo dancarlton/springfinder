@@ -3,42 +3,28 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useEffect, useState } from "react";
-import { dummyData } from "../../data/dummyData";
+import { cardData } from "../../utils/constants.";
 import Cards from "./Cards";
 
 const Carousel = () => {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    const processedData = [];
-
-    // extract data from springs
-    dummyData.springs.forEach((card) => {
-      processedData.push({
+    useEffect(() => {
+      const processedData = cardData.map((card) => ({
         name: card.name,
-        image: card.image,
+        link: card.link,
         description: card.description,
-      });
-    });
-
-    // extract data from pools
-    dummyData.pools.forEach((card) => {
-      processedData.push({
-        name: card.name,
-        image: card.image,
-        description: card.description,
-      });
-    });
-
-    setData(processedData);
-  }, []);
+      }));
+  
+      setData(processedData);
+    }, []);
 
   const settings = {
     dots: true,
     infinite: true,
     centerMode: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 2,
     slidesToScroll: 1,
   };
 
