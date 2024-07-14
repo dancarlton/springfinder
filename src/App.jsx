@@ -1,3 +1,5 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import { useState } from "react";
 import "./App.css";
@@ -31,22 +33,20 @@ function App() {
   }; */
 
   return (
-    <>
-      <div>
-        <Header />
-        <HeroSection />
-        <CarouselSection openDestination={openDestination} />
-        <DestinationModal
-          handleOutsideClick={handleOutsideClick}
-          isOpen={activeModal === "view-destination"}
-          item={cardData}
-          onClose={onClose}
-          // imagePopup={handleItemClick}
-          DestinationReviews={DestinationReviews}
-        />
-        <Footer />
-      </div>
-    </>
+    <div>
+      <Header />
+      <HeroSection />
+      <CarouselSection openDestination={openDestination} />
+      <DestinationModal
+        handleOutsideClick={handleOutsideClick}
+        isOpen={activeModal === "view-destination"}
+        item={cardData}
+        onClose={onClose}
+        // imagePopup={handleItemClick}
+        DestinationReviews={DestinationReviews}
+      />
+      <Footer />
+    </div>
   );
 }
 
