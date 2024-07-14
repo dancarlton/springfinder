@@ -61,7 +61,11 @@ const CarouselSection = () => {
         <div className="carousel">
           <Slider {...settings}>
             {data.map((item, index) => (
-              <Cards key={index} item={item} />
+              <Cards
+                openDestination={openDestination}
+                key={index}
+                item={item}
+              />
             ))}
           </Slider>
         </div>
