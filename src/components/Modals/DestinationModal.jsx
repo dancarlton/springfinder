@@ -25,10 +25,10 @@ function DestinationModal({
           className="modal__image"
           // onClick={imagePopup}
         />
-        /* possible like button that coordinates with card like button //
-        possible carousel in place of img */
+        <h2 className="modal__description"> {item.description}</h2>
+        {/* possible like button that coordinates with card like button //
+        possible carousel in place of img */}
         <section className="modal__directions">
-          <p className="modal__address">{item.address}</p>
           <button
             onClick={() => {
               getDirections(item);
@@ -37,12 +37,11 @@ function DestinationModal({
           >
             Get Directions
           </button>
+          <p className="modal__address">{item.address}</p>
         </section>
-        <h2 className="modal__description"> {item.description}</h2>
+
         <section className="modal__reviews">
           <DestinationReviews />
-          // Section Title + add review button + carosel with user pics + user
-          // reviews
         </section>
       </div>
     </div>
