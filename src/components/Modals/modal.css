@@ -68,14 +68,18 @@
   border: none;
   top: 20px;
   right: 28px;
-  background-image: url(../assets/Unionclose.png);
+  background-image: url(..//..//assets/Unionclose.png);
   width: 16px;
   height: 16px;
   background-color: transparent;
+  cursor: pointer;
+  background-repeat: no-repeat;
 }
 
 .modal__close-card-item {
-  background-image: url(../assets/UnionCardItemClose.png);
+  background-image: url(..//..//assets/Unionclose.png);
+  cursor: pointer;
+  background-repeat: no-repeat;
 }
 
 .modal__form {

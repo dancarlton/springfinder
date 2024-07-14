@@ -25,17 +25,25 @@ const CarouselSection = () => {
     setActiveModal("view-destination");
     setSelectedCard(item);
   };
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const processedData = cardData.map((card) => ({
+      id: card._id,
       name: card.name,
       link: card.link,
+      address: card.address,
+      coordinates: card.coordinates,
       description: card.description,
     }));
 
     setData(processedData);
   }, []);
+
+  const getDirections = (item) => {
+    document.location.href = `http://maps.google.com?q=${item.coordinates}`;
+  };
 
   const settings = {
     dots: true,
@@ -76,6 +84,7 @@ const CarouselSection = () => {
         isOpen={activeModal === "view-destination"}
         item={selectedCard}
         onClose={onClose}
+        getDirections={getDirections}
         // imagePopup={handleItemClick}
         DestinationReviews={DestinationReviews}
       />
