@@ -1,3 +1,5 @@
+import "./Footer.css";
+
 export const Footer = () => {
   return (
     <>
@@ -17,7 +19,11 @@ export const Footer = () => {
         </h1>
         <div className="footer__input-container">
           <p className="footer__input-label">Subscribe to our website</p>
-          <input className="footer__input" type="text" placeholder="Email"></input>
+          <input
+            className="footer__input"
+            type="text"
+            placeholder="Email"
+          ></input>
         </div>
         <p className="footer__copyright">© 2024 SpringFinder</p>
       </footer>

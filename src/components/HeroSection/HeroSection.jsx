@@ -1,5 +1,5 @@
-import SearchBar from "../common/SearchBar";
-import DestinationModal from "../DestinationModal";
+import SearchBar from "./SearchBar";
+import "./HeroSection.css";
 
 const HeroSection = () => {
   return (

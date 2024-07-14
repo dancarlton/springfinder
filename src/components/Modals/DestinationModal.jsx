@@ -1,4 +1,4 @@
-import "../blocks/modal.css";
+import "..//Modals/modal.css";
 
 function DestinationModal({
   handleOutsideClick,

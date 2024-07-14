@@ -20,4 +20,17 @@
   margin-left: 140px;
 }
 
+.carousel{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.slick-arrow{
+background-color: black; 
+}
+
+.slick-arrow:hover{
+  background-color: black;
+  opacity: .8;
+}
