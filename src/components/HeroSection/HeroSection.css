@@ -25,8 +25,8 @@
 .hero__text {
   display: flex;
   position: absolute;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 70px;
+  font-family: "DM Sans", Inter, Arial, sans-serif;
+  font-size: 88px;
   line-height: 88px;
   margin: 2px 25px;
   text-align: center;
