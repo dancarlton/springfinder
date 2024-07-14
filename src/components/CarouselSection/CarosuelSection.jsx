@@ -45,6 +45,21 @@ const CarouselSection = () => {
     document.location.href = `http://maps.google.com?q=${item.coordinates}`;
   };
 
+  useEffect(() => {
+    if (!activeModal) return;
+    const handleEscClose = (e) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscClose);
+
+    return () => {
+      document.removeEventListener("keydown", handleEscClose);
+    };
+  }, [activeModal]);
+
   const settings = {
     dots: true,
     infinite: true,
