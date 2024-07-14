@@ -1,4 +1,4 @@
-import "../blocks/modal.css";
+import "./modal.css";
 
 function ItemModal({ handleOutsideClick, activeModal, item, onClose }) {
   return (
