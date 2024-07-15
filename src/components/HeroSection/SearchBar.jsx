@@ -6,7 +6,7 @@ const SearchBar = () => {
         type="text"
         className="search__input"
         placeholder="Search..."
-        value="{query}"
+        value="Future Search by Zip/ Current Location Bridgeport, CA"
         onChange="{handleInputChange}"
       />
       {/* <button type='submit' className='search__button'>
