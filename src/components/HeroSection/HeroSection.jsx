@@ -1,6 +1,7 @@
 import SearchBar from "./SearchBar";
 import "./HeroSection.css";
 
+
 const HeroSection = () => {
   return (
     <>
@@ -9,7 +10,8 @@ const HeroSection = () => {
         <h1 className="hero__text">
           Cool off this summer at your local Waterhole
         </h1>
-        <SearchBar />
+        <button className="sleek-button" onclick="handleClick()">Find a Spot Near You</button>
+        {/* <SearchBar /> */}
       </div>
     </>
   );
